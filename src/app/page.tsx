@@ -16,7 +16,7 @@ export default function Home() {
       const storiesData = await fetch('/api/market-stories');
       setStories(await storiesData.json());
     })()
-  },[]);
+  }, []);
   return (
     <div className="sm:flex sm:flex-row sm:gap-4 bg-white">
       <Sidebar />
@@ -28,9 +28,9 @@ export default function Home() {
         <h1 className="text-2xl text-red-700 bg-gray-200 uppercase font-semibold sm:block hidden">Discussion Forum</h1>
         <div className="flex flex-col gap-4">
           {
-            posts.map(function (post:DiscussionForumProps) {
+            posts.map(function (post: DiscussionForumProps, key) {
               return (
-                <DiscussionForum {...post} />
+                <DiscussionForum key={key} {...post} />
               )
             })
           }
@@ -40,9 +40,9 @@ export default function Home() {
         <h1 className="text-2xl text-red-700 bg-gray-200 uppercase font-semibold sm:block hidden">Market stories</h1>
         <div className="flex flex-col gap-4">
           {
-            stories.map(function (story:MarketStoriesProps) {
+            stories.map(function (story: MarketStoriesProps, key) {
               return (
-                <MarketStories {...story} />
+                <MarketStories key={key} {...story} />
               )
             })
           }
