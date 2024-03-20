@@ -24,7 +24,7 @@ export default function Home() {
         <h1 className={`text-white uppercase font-semibold p-2 cursor-pointer basis-1/2  ${tabs == 0 ? 'bg-blue-800' : 'bg-blue-900'}`} onClick={() => setTabs(0)}>Discussion Forum</h1>
         <h1 className={`text-white uppercase font-semibold p-2 cursor-pointer basis-1/2  ${tabs == 1 ? 'bg-blue-800' : 'bg-blue-900'}`} onClick={() => setTabs(1)}>Market stories</h1>
       </div>
-      <div className={`${tabs == 0 ? 'block w-full' : 'sm:flex hidden'} sm:flex-col sm:gap-4 sm:basis-3/4 basis-1/2 h-screen overflow-auto`}>
+      <div className={`${tabs == 0 ? 'sm:flex block w-full' : 'sm:flex hidden'} sm:flex-col sm:gap-4 sm:basis-3/4 basis-1/2 h-screen overflow-auto`}>
         <h1 className="text-2xl text-red-700 bg-gray-200 uppercase font-semibold sm:block hidden">Discussion Forum</h1>
         <div className="flex flex-col gap-4">
           {
@@ -36,7 +36,7 @@ export default function Home() {
           }
         </div>
       </div>
-      <div className={`${tabs == 1 ? 'block w-full' : 'sm:flex hidden'} sm:flex-col sm:gap-4 sm:basis-1/4 basis-1/2 h-screen overflow-auto`}>
+      <div className={`${tabs == 1 ? 'sm:flex block w-full' : 'sm:flex hidden'} sm:flex-col sm:gap-4 sm:basis-1/4 basis-1/2 h-screen overflow-auto`}>
         <h1 className="text-2xl text-red-700 bg-gray-200 uppercase font-semibold sm:block hidden">Market stories</h1>
         <div className="flex flex-col gap-4">
           {
